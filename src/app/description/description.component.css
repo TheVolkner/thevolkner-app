@@ -1,0 +1,28 @@
+#section-description{
+  min-height: calc(100vh);
+}
+
+.heptagono{
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  height: 70px;
+  width: 70px;
+}
+
+.titlebar h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+
+.titlebar h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 10px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #F6C90E;
+}

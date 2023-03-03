@@ -1,0 +1,71 @@
+<section id="section-contact" class="bg-dark">
+  <main class="container">
+    <section class="row">
+      <article class="col-12 mt-2 mt-lg-1">
+        <section class="titlebar mt-2 mt-lg-0">
+          <h1
+            class="text-white text-center mt-5 border-warning border-bottom-1"
+          >
+            CONTÁCTAME
+          </h1>
+        </section>
+      </article>
+      <article class="col-12 mt-2 mt-lg-1 mb-2">
+          <form #f="ngForm" (ngSubmit)="f.form.valid && enviarCorreo(f)">
+            <section class="card bg-white-50">
+              <section class="card-body bg-white-50">
+                <h5 class="card-title text-center">¡Indica en el siguiente formulario tus datos y tu mensaje!</h5>
+                  <article class="row">
+                    <section class="col-12 mt-2 mt-lg-1">
+                      <p>
+                      <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput [(ngModel)]="nombre" name="nombre" required placeholder="Indique su nombre..." />
+                      </mat-form-field>
+                    </p>
+                    </section>
+                    <section class="col-12 mt-2 mt-lg-1">
+                      <p>
+                      <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Apellido</mat-label>
+                        <input matInput [(ngModel)]="apellido" name="apellido" required placeholder="Indique su nombre..." />
+                      </mat-form-field>
+                    </p>
+                    </section>
+                    <section class="col-12 mt-2 mt-lg-1">
+                      <p>
+                      <mat-form-field appearance="outline" class="w-100">
+                        <mat-label>Email</mat-label>
+                        <input type="email"
+                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
+                        [(ngModel)]="email"
+                        name="email"
+                        required
+                        matInput
+                        placeholder="Indique su email" />
+                      </mat-form-field>
+                    </p>
+                    </section>
+                    <section class="col-12 mt-2 mt-lg-1">
+                      <p>
+                        <mat-form-field class="example-full-width" class="w-100">
+                          <mat-label>Mensaje</mat-label>
+                          <textarea matInput [(ngModel)]="text"
+                          name="text" required placeholder="¡Escribe tu mensaje!"></textarea>
+                        </mat-form-field>
+                      </p>
+                    </section>
+                    <section class="col-12 mt-2 mt-lg-1 text-center mx-auto">
+                      <p>
+                        <button type="submit" class="btn btn-warning mx-2 fw-bold" (click)="checkForm(f)">Enviar</button>
+                        <button type="reset" class="btn btn-warning mx-2 fw-bold">Limpiar</button>
+                      </p>
+                    </section>
+                  </article>
+              </section>
+            </section>
+        </form>
+      </article>
+    </section>
+  </main>
+</section>

@@ -1,0 +1,28 @@
+#section-portfolio{
+  min-height: calc(100vh);
+}
+
+.video-techpanther{
+  min-width: 100%;
+  min-height: 180px;
+}
+
+
+.titlebar h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+
+.titlebar h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 10px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #F6C90E;
+}
