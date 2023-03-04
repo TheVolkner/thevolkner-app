@@ -35,14 +35,14 @@ export class ContactFormComponent {
     //SI SE ENVÍA CORRECTAMENTE, MOSTRAMOS EL SWEET ALERT DE SUCCESS Y LIMPIAMOS CAMPOS
     this.emailService.enviarCorreo(correo).subscribe(
       (data) => {
-        Swal.fire('¡Mensaje enviado!', '¡Gracias por sus comentarios, los leeré en breve!', 'success');
+        Swal.fire('¡Message sent!', 'Thank you, I will read your message soon!', 'success');
         this.nombre = '';
         this.apellido = '';
         this.email = '';
         this.text = '';
       },
       (error) => {
-        this.matSnackBar.open('¡Ha ocurrido un error al enviar sus comentarios!','Aceptar',{
+        this.matSnackBar.open('Oh! There was a little problem proccessing your message','Ok',{
           duration:3000,
           verticalPosition: 'bottom',
           horizontalPosition: 'right'
@@ -59,7 +59,7 @@ export class ContactFormComponent {
 
       //INDICAMOS EL SNACK BAR CON EL MENSAJE DE ALERTA DE QUE LLENE LOS CAMPOS
       //INDICAMOS EN LA CONFIG LA DURACIÓN, Y LA POSICION X E Y
-      this.matSnackBar.open('¡Debe llenar todos los campos correctamente!','Aceptar',{
+      this.matSnackBar.open('¡Please ensure you correctly filled all the fields!','Ok',{
         duration:3000,
         verticalPosition: 'bottom',
         horizontalPosition: 'right'
