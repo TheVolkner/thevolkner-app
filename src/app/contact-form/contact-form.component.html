@@ -1,71 +1,101 @@
 <section id="section-contact" class="bg-dark">
-  <main class="container">
-    <section class="row">
-      <article class="col-12 mt-2 mt-lg-1">
-        <section class="titlebar mt-2 mt-lg-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 mt-2 mt-lg-1">
+        <div class="titlebar mt-2 mt-lg-0">
           <h1
             class="text-white text-center mt-5 border-warning border-bottom-1"
           >
             CONTACT ME
           </h1>
-        </section>
-      </article>
-      <article class="col-12 mt-2 mt-lg-1 mb-2">
-          <form #f="ngForm" (ngSubmit)="f.form.valid && enviarCorreo(f)">
-            <section class="card bg-white-50">
-              <section class="card-body bg-white-50">
-                <h5 class="card-title text-center">¡Use this form to send me your message, just add some info to let me contact you back!</h5>
-                  <article class="row">
-                    <section class="col-12 mt-2 mt-lg-1">
-                      <p>
-                      <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Name</mat-label>
-                        <input matInput [(ngModel)]="nombre" name="nombre" required placeholder="Type here your Name..." />
-                      </mat-form-field>
-                    </p>
-                    </section>
-                    <section class="col-12 mt-2 mt-lg-1">
-                      <p>
-                      <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Last Name</mat-label>
-                        <input matInput [(ngModel)]="apellido" name="apellido" required placeholder="Type here your Last Name..." />
-                      </mat-form-field>
-                    </p>
-                    </section>
-                    <section class="col-12 mt-2 mt-lg-1">
-                      <p>
-                      <mat-form-field appearance="outline" class="w-100">
-                        <mat-label>Email</mat-label>
-                        <input type="email"
+        </div>
+      </div>
+      <div class="col-12 mt-2 mt-lg-1 mb-2">
+        <form #f="ngForm" (ngSubmit)="f.form.valid && enviarCorreo(f)">
+          <div class="card bg-white-50">
+            <div class="card-body bg-white-50">
+              <h5 class="card-title text-center">
+                ¡Use this form to send me your message, just add some info to
+                let me contact you back!
+              </h5>
+              <div class="row">
+                <div class="col-12 mt-2 mt-lg-1">
+                  <p>
+                    <mat-form-field appearance="outline" class="w-100">
+                      <mat-label>Name</mat-label>
+                      <input
+                        matInput
+                        [(ngModel)]="nombre"
+                        name="nombre"
+                        required
+                        placeholder="Type here your Name..."
+                      />
+                    </mat-form-field>
+                  </p>
+                </div>
+                <div class="col-12 mt-2 mt-lg-1">
+                  <p>
+                    <mat-form-field appearance="outline" class="w-100">
+                      <mat-label>Last Name</mat-label>
+                      <input
+                        matInput
+                        [(ngModel)]="apellido"
+                        name="apellido"
+                        required
+                        placeholder="Type here your Last Name..."
+                      />
+                    </mat-form-field>
+                  </p>
+                </div>
+                <div class="col-12 mt-2 mt-lg-1">
+                  <p>
+                    <mat-form-field appearance="outline" class="w-100">
+                      <mat-label>Email</mat-label>
+                      <input
+                        type="email"
                         pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
                         [(ngModel)]="email"
                         name="email"
                         required
                         matInput
-                        placeholder="Type here your Email..." />
-                      </mat-form-field>
-                    </p>
-                    </section>
-                    <section class="col-12 mt-2 mt-lg-1">
-                      <p>
-                        <mat-form-field class="example-full-width" class="w-100">
-                          <mat-label>Message</mat-label>
-                          <textarea matInput [(ngModel)]="text"
-                          name="text" required placeholder="Type your message!"></textarea>
-                        </mat-form-field>
-                      </p>
-                    </section>
-                    <section class="col-12 mt-2 mt-lg-1 text-center mx-auto">
-                      <p>
-                        <button type="submit" class="btn btn-warning mx-2 fw-bold" (click)="checkForm(f)">Send</button>
-                        <button type="reset" class="btn btn-warning mx-2 fw-bold">Clean</button>
-                      </p>
-                    </section>
-                  </article>
-              </section>
-            </section>
+                        placeholder="Type here your Email..."
+                      />
+                    </mat-form-field>
+                  </p>
+                </div>
+                <div class="col-12 mt-2 mt-lg-1">
+                  <p>
+                    <mat-form-field class="example-full-width" class="w-100">
+                      <mat-label>Message</mat-label>
+                      <textarea
+                        matInput
+                        [(ngModel)]="text"
+                        name="text"
+                        required
+                        placeholder="Type your message!"
+                      ></textarea>
+                    </mat-form-field>
+                  </p>
+                </div>
+                <div class="col-12 mt-2 mt-lg-1 text-center mx-auto">
+                  <p>
+                    <button
+                      type="submit"
+                      class="btn btn-warning mx-2 fw-bold"
+                      (click)="checkForm(f)"
+                    >
+                      Send
+                    </button>
+                    <button type="reset" class="btn btn-warning mx-2 fw-bold">
+                      Clean
+                    </button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </form>
-      </article>
-    </section>
-  </main>
+      </div>
+    </div>
+  </div>
 </section>
