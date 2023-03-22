@@ -12,7 +12,7 @@
   position: relative;
 }
 .img-about{
-  content: url("../../assets/wallpaper.png");
+  content: url("../../assets/wallpaper.jpg");
   position: absolute;
   width: 100vw;
   height: 100vh;
