@@ -1,58 +1,30 @@
-<main id="main-aboutme">
-  <section id="about-me">
-    <img alt="About-Wallpaper" class="img-fluid img-about" />
-    <div class="container position-relative h-100">
-      <div class="row position-relative pt-lg-5 pt-5">
-        <div class="col-12 mt-lg-5 mt-5  position-relative">
-          <h1
-            class="text-warning text-center pt-1 mt-3 mt-md-5 mt-lg-3 animate__animated animate__fadeIn"
-          >
-            Hi!
-          </h1>
-          <h1
-            class="text-warning text-center pt-1 mt-md-5 mt-lg-3 animate__animated animate__fadeIn animate__delay-1s"
-          >
-            I'm
-            <span
-              ><a
-                href="#section-description"
-                class="text-decoration-none text-white"
-                >Omar Arvelo.</a
-              ></span
-            >
-          </h1>
-          <h1
-            class="text-warning text-center pt-1 mt-md-5 mt-lg-3 animate__animated animate__fadeIn animate__delay-2s"
-          >
-            Java
-            <span
-              ><a href="#section-skills" class="text-decoration-none text-white"
-                >Full-Stack</a
-              ></span
-            >
-            Developer.
-          </h1>
-          <h1
-            class="text-warning text-center pt-1 mt-md-5 mt-lg-3 animate__animated animate__fadeIn animate__delay-3s"
-          >
-            Alright, get ready.
-            <span
-              ><a
-                href="#section-portfolio"
-                class="text-decoration-none text-white"
-                id="nombre"
-                >Let's checkout my work!</a
-              ></span
-            >
-          </h1>
-          <a href="#section-description"
-            ><h1 class="text-white text-center pt-1 mt-lg-3">
-              <i
-                class="fa-sharp fa-solid fa-hand-point-down animate__animated animate__fadeIn animate__delay-4s"
-              ></i></h1
-          ></a>
-        </div>
+<main id="home" class="hero">
+  <div class="hero-glow"></div>
+  <div class="site-container hero-content">
+    <div class="hero-copy">
+      <p class="eyebrow"><span></span>{{ i18n.text('Desarrollo soluciones fullstack que convierten ideas en impacto real.', 'I build full-stack solutions that turn ideas into real impact.') }}</p>
+      <h1>
+        {{ i18n.text('Pensado para el servidor.', 'Built for the server.') }}
+        <span>{{ i18n.text('Diseñado para el usuario.', 'Designed for the user.') }}</span>
+      </h1>
+      <p class="hero-description">{{ heroDescription }}</p>
+      <div class="hero-actions">
+        <a class="button-primary" href="#work">
+          {{ i18n.text('Explorar proyectos', 'Explore my work') }} <i class="fa-solid fa-arrow-down"></i>
+        </a>
+        <a class="button-secondary" [href]="i18n.lang === 'es' ? 'assets/CV-ES.pdf' : 'assets/CV-EN.pdf'" target="_blank" rel="noopener">
+          {{ i18n.text('Ver currículum', 'View résumé') }} <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
       </div>
     </div>
-  </section>
+
+  </div>
+
+  <div class="hero-footer site-container">
+    <span>{{ i18n.text('DESPLAZA PARA DESCUBRIR', 'SCROLL TO DISCOVER') }}</span>
+    <div class="socials">
+      <a href="https://github.com/TheVolkner" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/omarblz81/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+  </div>
 </main>

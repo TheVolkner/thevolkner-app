@@ -1,0 +1,153 @@
+
+> thevolkner-app@0.0.0 start
+> ng serve --host 127.0.0.1 --port 4300
+
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   3.49 MB |
+styles.css, styles.js | styles        | 519.20 kB |
+polyfills.js          | polyfills     | 314.28 kB |
+main.js               | main          | 146.54 kB |
+scripts.js            | scripts       |  59.03 kB |
+runtime.js            | runtime       |   6.53 kB |
+
+| Initial Total |   4.52 MB
+
+Build at: 2026-08-10T04:41:03.832Z - Hash: ee2d837364c74954 - Time: 15009ms
+
+** Angular Live Development Server is listening on 127.0.0.1:4300, open your browser on http://127.0.0.1:4300/ **
+
+
+√ Compiled successfully.
+
+6 unchanged chunks
+
+Build at: 2026-08-10T04:44:00.398Z - Hash: ee2d837364c74954 - Time: 761ms
+
+√ Compiled successfully.
+
+6 unchanged chunks
+
+Build at: 2026-08-10T04:44:01.315Z - Hash: ee2d837364c74954 - Time: 718ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 147.38 kB |
+runtime.js          | runtime |   6.53 kB |
+
+4 unchanged chunks
+
+Build at: 2026-08-10T04:52:52.122Z - Hash: 6d65fd6ce7598cb8 - Time: 2670ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 146.98 kB |
+runtime.js          | runtime |   6.53 kB |
+
+4 unchanged chunks
+
+Build at: 2026-08-10T04:53:26.162Z - Hash: a7c14a13d9095ca4 - Time: 2022ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 147.20 kB |
+runtime.js          | runtime |   6.53 kB |
+
+4 unchanged chunks
+
+Build at: 2026-08-10T04:53:59.579Z - Hash: e99d9676bb489cf3 - Time: 686ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 147.20 kB |
+runtime.js          | runtime |   6.53 kB |
+
+4 unchanged chunks
+
+Build at: 2026-08-10T04:54:12.510Z - Hash: 722f6ab5682b928d - Time: 1034ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 147.21 kB |
+runtime.js          | runtime |   6.53 kB |
+
+4 unchanged chunks
+
+Build at: 2026-08-10T04:54:24.413Z - Hash: 21d157ca4094eb4b - Time: 578ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 147.20 kB |
+runtime.js          | runtime |   6.53 kB |
+
+4 unchanged chunks
+
+Build at: 2026-08-10T04:54:41.442Z - Hash: 24551d7a983938cf - Time: 592ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 147.19 kB |
+runtime.js          | runtime |   6.53 kB |
+
+4 unchanged chunks
+
+Build at: 2026-08-10T04:55:11.166Z - Hash: 5355ff6c9e97ed2f - Time: 555ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 146.85 kB |
+runtime.js          | runtime |   6.53 kB |
+
+4 unchanged chunks
+
+Build at: 2026-08-10T04:55:24.101Z - Hash: b93e8b3d3ddd0def - Time: 492ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 146.89 kB |
+runtime.js          | runtime |   6.53 kB |
+
+4 unchanged chunks
+
+Build at: 2026-08-10T05:00:59.532Z - Hash: 1936b55d6786c03a - Time: 1131ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 147.26 kB |
+runtime.js          | runtime |   6.53 kB |
+
+4 unchanged chunks
+
+Build at: 2026-08-10T05:01:21.624Z - Hash: 68c0cb389204c288 - Time: 512ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 147.44 kB |
+runtime.js          | runtime |   6.53 kB |
+
+4 unchanged chunks
+
+Build at: 2026-08-10T05:02:21.065Z - Hash: c407f8cfede1a158 - Time: 497ms
+
+√ Compiled successfully.
+
+Initial Chunk Files | Names   |  Raw Size
+main.js             | main    | 147.63 kB |
+runtime.js          | runtime |   6.53 kB |
+
+4 unchanged chunks
+
+Build at: 2026-08-10T05:02:33.079Z - Hash: 939555d0ce7fdf12 - Time: 610ms
+
+√ Compiled successfully.

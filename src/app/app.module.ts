@@ -19,6 +19,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RevealDirective } from './directives/reveal.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContactFormComponent,
     FooterComponent,
     HeaderComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    RevealDirective
   ],
   imports: [
     BrowserModule,

@@ -1,31 +1,33 @@
+.hero { position: relative; display: grid; min-height: 100svh; padding: 136px 0 48px; overflow: hidden; background: #080808; }
+.hero::before { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(8,8,8,.98) 0%, rgba(8,8,8,.85) 48%, rgba(8,8,8,.55) 100%), url("../../assets/wallpaper.jpg") center/cover; filter: saturate(.15); opacity: .72; }
+.hero::after { position: absolute; inset: 0; content: ""; opacity: .13; background-image: linear-gradient(rgba(255,255,255,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.13) 1px, transparent 1px); background-size: 70px 70px; mask-image: linear-gradient(to right, transparent, #000); }
+.hero-glow { position: absolute; z-index: 1; top: 12%; right: 5%; width: 440px; height: 440px; border-radius: 50%; background: rgba(246,201,14,.12); filter: blur(90px); }
+.hero-content { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr; align-items: center; }
+.hero-copy { animation: hero-in 850ms cubic-bezier(.2,.75,.3,1) both; }
+.eyebrow { display: flex; align-items: center; gap: 10px; max-width: 760px; margin: 0 0 24px; color: #f7f5ed; font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.eyebrow span { width: 8px; height: 8px; border-radius: 50%; background: #f6c90e; box-shadow: 0 0 0 7px rgba(246,201,14,.12); animation: pulse 2.2s infinite; }
+h1 { max-width: 980px; margin: 0; color: #f7f5ed; font-family: "Space Grotesk", sans-serif; font-size: clamp(3.5rem, 8.4vw, 8.4rem); font-weight: 700; letter-spacing: -.07em; line-height: .86; }
+h1 span { display: block; color: #f6c90e; }
+.hero-description { max-width: 660px; margin: 30px 0 0; color: #bbb9b1; font-size: clamp(1.02rem, 1.7vw, 1.25rem); line-height: 1.7; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+.hero-footer { position: relative; z-index: 2; display: flex; align-self: end; align-items: center; justify-content: space-between; margin-top: 70px; color: #686863; font-size: .65rem; font-weight: 800; letter-spacing: .14em; }
+.socials { display: flex; gap: 8px; }
+.socials a { display: grid; width: 38px; height: 38px; place-items: center; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; color: #d3d1c9; text-decoration: none; transition: all 180ms ease; }
+.socials a i { font-size: 1rem; }
+.socials a:hover { color: #080808; border-color: #f6c90e; background: #f6c90e; transform: translateY(-3px); }
+@keyframes hero-in { from { opacity: 0; transform: translateY(28px); } }
+@keyframes pulse { 50% { box-shadow: 0 0 0 12px rgba(246,201,14,0); } }
 
-
-#main-aboutme{
-  position: relative;
-  min-height: 100vh;
+@media (max-width: 860px) {
+  .hero { padding-top: 120px; }
+  .hero-copy { max-width: 720px; }
 }
-
-@media only screen and (min-width: 576px) {
-#about-me{
-  padding:0;
-  margin: 0;
-  position: relative;
-}
-.img-about{
-  content: url("../../assets/wallpaper.jpg");
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-}
-}
-
-@media only screen and (max-width: 576px) {
-  /* For mobile phones: */
-  .img-about{
-    content: url("../../assets/phonewallpaper.png");
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-  }
-
+@media (max-width: 520px) {
+  .hero { min-height: 760px; padding-top: 116px; }
+  .hero::before { background: linear-gradient(rgba(8,8,8,.78), rgba(8,8,8,.97)), url("../../assets/phonewallpaper.png") center/cover; }
+  h1 { font-size: clamp(3.1rem, 17vw, 5rem); }
+  .hero-actions { display: grid; }
+  .button-primary, .button-secondary { width: 100%; }
+  .hero-footer { margin-top: 50px; }
+  .hero-footer > span { max-width: 130px; line-height: 1.5; }
 }

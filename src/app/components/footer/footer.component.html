@@ -1,24 +1,11 @@
-<footer class="footer-webpage text-light py-0">
-  <p class="letra-footer text-dark fs-5">TheVolkner - 2022.</p>
-  <p>
-    <a
-      href="https://www.linkedin.com/in/omar-arvelo-578a491a2/"
-      class="ms-2 text-dark fs-5"
-      target="_blank"
-      ><i class="fa-brands fa-linkedin-in mx-2"></i></a
-    ><span class="text-dark fw-bold">|</span>
-    <a
-      href="https://github.com/TheVolkner"
-      class="text-dark fs-5"
-      target="_blank"
-      ><i class="fa-brands fa-github mx-2"></i>
-    </a>
-    <span class="text-dark fw-bold ">|</span>
-    <a
-      href="https://www.instagram.com/omarblz.dev/"
-      class="text-dark fs-5"
-      target="_blank"
-      ><i class="fa-brands fa-instagram mx-2"></i></a
-    ><span class="text-dark fw-bold">|</span>
-  </p>
+<footer class="footer-webpage">
+  <div class="site-container footer-inner">
+    <a class="footer-brand" href="#home">Omar Arvelo (TheVolkner)</a>
+    <p>© {{ year }} Omar Arvelo (TheVolkner) - Fullstack Developer.</p>
+    <div class="footer-links">
+      <a href="https://github.com/TheVolkner" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/omarblz81/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#home" [attr.aria-label]="i18n.text('Volver arriba', 'Back to top')"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </div>
 </footer>

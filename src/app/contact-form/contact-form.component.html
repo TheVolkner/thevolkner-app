@@ -1,101 +1,21 @@
-<section id="section-contact" class="bg-dark">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 mt-2 mt-lg-1">
-        <div class="titlebar mt-2 mt-lg-0">
-          <h1
-            class="text-white text-center mt-5 border-warning border-bottom-1"
-          >
-            CONTACT ME
-          </h1>
-        </div>
-      </div>
-      <div class="col-12 mt-2 mt-lg-1 mb-2">
-        <form #f="ngForm" (ngSubmit)="f.form.valid && enviarCorreo(f)">
-          <div class="card bg-white-50">
-            <div class="card-body bg-white-50">
-              <h5 class="card-title text-center">
-                Use this form to send me your message, just add some info to
-                let me contact you back!
-              </h5>
-              <div class="row">
-                <div class="col-12 mt-2 mt-lg-1">
-                  <p>
-                    <mat-form-field appearance="outline" class="w-100">
-                      <mat-label>Name</mat-label>
-                      <input
-                        matInput
-                        [(ngModel)]="nombre"
-                        name="nombre"
-                        required
-                        placeholder="Type here your Name..."
-                      />
-                    </mat-form-field>
-                  </p>
-                </div>
-                <div class="col-12 mt-2 mt-lg-1">
-                  <p>
-                    <mat-form-field appearance="outline" class="w-100">
-                      <mat-label>Last Name</mat-label>
-                      <input
-                        matInput
-                        [(ngModel)]="apellido"
-                        name="apellido"
-                        required
-                        placeholder="Type here your Last Name..."
-                      />
-                    </mat-form-field>
-                  </p>
-                </div>
-                <div class="col-12 mt-2 mt-lg-1">
-                  <p>
-                    <mat-form-field appearance="outline" class="w-100">
-                      <mat-label>Email</mat-label>
-                      <input
-                        type="email"
-                        pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$"
-                        [(ngModel)]="email"
-                        name="email"
-                        required
-                        matInput
-                        placeholder="Type here your Email..."
-                      />
-                    </mat-form-field>
-                  </p>
-                </div>
-                <div class="col-12 mt-2 mt-lg-1">
-                  <p>
-                    <mat-form-field class="example-full-width" class="w-100">
-                      <mat-label>Message</mat-label>
-                      <textarea
-                        matInput
-                        [(ngModel)]="text"
-                        name="text"
-                        required
-                        placeholder="Type your message!"
-                      ></textarea>
-                    </mat-form-field>
-                  </p>
-                </div>
-                <div class="col-12 mt-2 mt-lg-1 text-center mx-auto">
-                  <p>
-                    <button
-                      type="submit"
-                      class="btn btn-warning mx-2 fw-bold"
-                      (click)="checkForm(f)"
-                    >
-                      Send
-                    </button>
-                    <button type="reset" class="btn btn-warning mx-2 fw-bold">
-                      Clean
-                    </button>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
+<section id="contact" class="section-shell contact-section">
+  <div class="site-container contact-grid">
+    <div class="contact-copy" appReveal>
+      <p class="section-kicker">{{ i18n.text('Hablemos', 'Let’s talk') }}</p>
+      <h2 class="section-title">{{ i18n.text('¿Tienes una idea? Hagámosla realidad.', 'Have an idea? Let’s make it real.') }}</h2>
+      <p class="section-intro">{{ i18n.text('Cuéntame sobre el proyecto, el reto o la oportunidad. Te responderé tan pronto como pueda.', 'Tell me about the project, challenge or opportunity. I’ll get back to you as soon as I can.') }}</p>
+      <a class="email-link" href="mailto:thevolkner9094@gmail.com"><i class="fa-regular fa-envelope"></i> thevolkner9094@gmail.com</a>
+      <div class="contact-note"><span><i class="fa-solid fa-handshake-angle"></i></span><p>{{ i18n.text('Disponible para proyectos freelance y oportunidades de colaboración.', 'Available for freelance projects and collaboration opportunities.') }}</p></div>
     </div>
+    <form #f="ngForm" (ngSubmit)="f.form.valid && enviarCorreo(f)" class="contact-form" appReveal>
+      <div class="form-heading"><span>{{ i18n.text('ENVÍA UN MENSAJE', 'SEND A MESSAGE') }}</span><i class="fa-solid fa-arrow-down"></i></div>
+      <div class="field-row">
+        <label><span>{{ i18n.text('Nombre', 'First name') }}</span><input [(ngModel)]="nombre" name="nombre" required [placeholder]="i18n.text('Tu nombre', 'Your name')" /></label>
+        <label><span>{{ i18n.text('Apellido', 'Last name') }}</span><input [(ngModel)]="apellido" name="apellido" required [placeholder]="i18n.text('Tu apellido', 'Your last name')" /></label>
+      </div>
+      <label><span>Email</span><input type="email" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" [(ngModel)]="email" name="email" required placeholder="nombre@correo.com" /></label>
+      <label><span>{{ i18n.text('Mensaje', 'Message') }}</span><textarea [(ngModel)]="text" name="text" required rows="5" [placeholder]="i18n.text('Cuéntame sobre tu idea...', 'Tell me about your idea...')"></textarea></label>
+      <button type="submit" class="submit-button" (click)="checkForm(f)">{{ i18n.text('Enviar mensaje', 'Send message') }} <i class="fa-solid fa-arrow-right"></i></button>
+    </form>
   </div>
 </section>

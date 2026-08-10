@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-description',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./description.component.css']
 })
 export class DescriptionComponent {
-
+  constructor(public i18n: LanguageService) {}
 }

@@ -1,115 +1,44 @@
-<section id="section-description" class="bg-dark">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 mt-2 mt-lg-1">
-        <div class="titlebar mt-2 mt-lg-0">
-          <h1
-            class="text-white text-center mt-5 border-warning border-bottom-1"
-          >
-            About Omar
-          </h1>
-        </div>
+<section id="about" class="section-shell about-section">
+  <div class="site-container">
+    <div class="about-heading" appReveal>
+      <div>
+        <p class="section-kicker">{{ i18n.text('Sobre mí', 'About me') }}</p>
+        <h2 class="section-title">{{ i18n.text('La tecnología es el medio. La solución es la meta.', 'Technology is the medium. The solution is the goal.') }}</h2>
       </div>
-      <div class="col-12">
+      <p class="section-intro">
+        {{ i18n.text(
+          'Trabajo de principio a fin: entiendo el problema, diseño una arquitectura mantenible y construyo una experiencia que las personas quieran usar.',
+          'I work from end to end: understanding the problem, designing maintainable architecture and building an experience people actually want to use.'
+        ) }}
+      </p>
+    </div>
 
-          <h4 class="text-white text-center mt-2 opacity-75">
-            What would you expect working with me?
-          </h4>
-
-      </div>
-      <div class="col-12 col-lg-6 mx-auto text-center mt-2">
-        <div class="row">
-          <div class="col-12 mt-4">
-            <div class="card text-center bg-warning">
-              <div class="card-header">
-                <section class="heptagono mx-auto text-center bg-dark">
-                  <i class="fa-solid fa-rocket text-white fs-2 pt-3"></i>
-                </section>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Focus</h5>
-                <p class="card-text">
-                  To work with the best techniques and tools in order to improve
-                  my software development.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 mt-4">
-            <div class="card text-center bg-warning">
-              <div class="card-header">
-                <div class="heptagono mx-auto text-center bg-dark">
-                  <i class="fa-solid fa-computer text-white fs-2 pt-3"></i>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Experience</h5>
-                <p class="card-text">
-                  I'm a software developer with experience working as a PC Tech
-                  Service and using Graphic Design tools.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 mt-4">
-            <div class="card text-center bg-warning">
-              <div class="card-header">
-                <div class="heptagono mx-auto text-center bg-dark">
-                  <i class="fa-regular fa-lightbulb text-white fs-2 pt-3"></i>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Innovation</h5>
-                <p class="card-text">
-                  Always with the goal of bring ideas and alternatives to found
-                  solutions and improve the team and project success.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mt-4">
-            <div class="card text-center bg-warning">
-              <div class="card-header">
-                <div class="heptagono mx-auto text-center bg-dark">
-                  <i
-                    class="fa-solid fa-handshake-angle text-white fs-2 pt-3"
-                  ></i>
-                </div>
-              </div>
-              <div class="card-body">
-                <h5 class="card-title">Communication</h5>
-                <p class="card-text">
-                  My native language is spanish, and then I learned english. So
-                  I can properly work and communicate with my team mates and
-                  clients in both languages.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 mt-4">
-            <div class="card text-center bg-secondary">
-              <div class="card-body">
-                <h5 class="card-title text-white">
-                  ¡Checkout more details in my CV!
-                </h5>
-                <p class="card-text">
-                  <a
-                    href="../../assets/CV.pdf"
-                    class="text-decoration-none"
-                    ><button
-                      type="button"
-                      class="btn btn-rounded btn-dark waves-effect waves-light"
-                    >
-                      <i class="fas fa-th-list pr-2" aria-hidden="true"></i>
-                      Open CV
-                    </button></a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="about-grid">
+      <article class="principle principle-large" appReveal>
+        <span class="principle-index"><i class="fa-solid fa-crosshairs"></i></span>
+        <i class="fa-solid fa-bullseye"></i>
+        <h3>{{ i18n.text('Enfoque', 'Focus') }}</h3>
+        <p>{{ i18n.text('Cada decisión técnica debe acercar el producto a un objetivo concreto y medible.', 'Every technical decision should move the product toward a concrete, measurable goal.') }}</p>
+      </article>
+      <article class="principle" appReveal>
+        <span class="principle-index"><i class="fa-solid fa-laptop-code"></i></span>
+        <i class="fa-solid fa-code"></i>
+        <h3>{{ i18n.text('Experiencia', 'Experience') }}</h3>
+        <p>{{ i18n.text('Desarrollo de software, soporte técnico y diseño visual con una mirada integral.', 'Software development, technical support and visual design through one integrated lens.') }}</p>
+      </article>
+      <article class="principle" appReveal>
+        <span class="principle-index"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+        <i class="fa-regular fa-lightbulb"></i>
+        <h3>{{ i18n.text('Innovación', 'Innovation') }}</h3>
+        <p>{{ i18n.text('Ideas útiles, alternativas claras y mejora continua para el equipo y el producto.', 'Useful ideas, clear alternatives and continuous improvement for both team and product.') }}</p>
+      </article>
+      <article class="principle principle-wide" appReveal>
+        <span class="principle-index"><i class="fa-solid fa-language"></i></span>
+        <i class="fa-regular fa-comments"></i>
+        <h3>{{ i18n.text('Comunicación sin fronteras', 'Communication without borders') }}</h3>
+        <p>{{ i18n.text('Español nativo e inglés profesional para colaborar con equipos y clientes internacionales.', 'Native Spanish and professional English to collaborate with international teams and clients.') }}</p>
+        <span class="language-label">ES / EN</span>
+      </article>
     </div>
   </div>
 </section>

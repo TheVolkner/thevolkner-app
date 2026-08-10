@@ -1,177 +1,29 @@
-<section id="section-skills" class="bg-dark">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 mt-2 mt-lg-1">
-        <div class="titlebar mt-2 mt-lg-0">
-          <h1
-            class="text-white text-center mt-5 border-warning border-bottom-1"
-          >
-            SKILLS
-          </h1>
-        </div>
+<section id="skills" class="section-shell skills-section">
+  <div class="site-container">
+    <div class="skills-heading" appReveal>
+      <div>
+        <p class="section-kicker">{{ i18n.text('Stack técnico', 'Technical stack') }}</p>
+        <h2 class="section-title">{{ i18n.text('Herramientas que convierto en soluciones.', 'Tools I turn into solutions.') }}</h2>
       </div>
-      <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-5">
-        <div class="circulo mx-auto text-center">
-          <img
-            src="../../assets/circulojava.png"
-            alt="Java"
-            width="70"
-            height="70"
-            class="img mt-1"
-          />
-          <h3 class="text-white text-center mt-2"> <i class="fa-solid fa-circle-check"></i> Java</h3>
-        </div>
-      </div>
-      <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-5">
-        <div class="circulo mx-auto text-center">
-          <img
-            src="../../assets/circulospring.png"
-            alt="Sass"
-            width="70"
-            height="70"
-            class="img mt-1"
-          />
-          <h3 class="text-white text-center mt-2"><i class="fa-solid fa-circle-check"></i> Spring</h3>
+      <p class="section-intro">{{ i18n.text('Un stack equilibrado para construir desde la interfaz hasta la infraestructura.', 'A balanced stack to build from interface to infrastructure.') }}</p>
+    </div>
 
-        </div>
-      </div>
-      <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-5">
-        <div class="circulo mx-auto text-center">
-          <img
-            src="../../assets/circulohtml.png"
-            alt="HTML"
-            width="70"
-            height="70"
-            class="img mt-1"
-          />
-          <h3 class="text-white text-center mt-2"><i class="fa-solid fa-circle-check"></i> HTML</h3>
-
-        </div>
-      </div>
-      <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-5">
-        <div class="circulo mx-auto text-center">
-          <img
-            src="../../assets/circulocss.png"
-            alt="CSS"
-            width="70"
-            height="70"
-            class="img mt-1"
-          />
-          <h3 class="text-white text-center mt-2"><i class="fa-solid fa-circle-check"></i> CSS</h3>
-
-        </div>
-      </div>
-      <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-5">
-        <div class="circulo mx-auto text-center">
-          <img
-            src="../../assets/circulojs.png"
-            alt="JavaScript"
-            width="70"
-            height="70"
-            class="img mt-1"
-          />
-          <h3 class="text-white text-center mt-2"><i class="fa-solid fa-circle-check"></i> JavaScript</h3>
-
-        </div>
-      </div>
-      <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-5">
-        <div class="circulo mx-auto text-center">
-          <img
-            src="../../assets/circulobootstrap.png"
-            alt="Bootstrap"
-            width="70"
-            height="70"
-            class="img mt-1"
-          />
-          <h3 class="text-white text-center mt-2"><i class="fa-solid fa-circle-check"></i> Bootstrap</h3>
-
-        </div>
-      </div>
-      <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-5">
-        <div class="circulo mx-auto text-center">
-          <img
-            src="../../assets/circlets.png"
-            alt="TypeScript"
-            width="70"
-            height="70"
-            class="img mt-1"
-          />
-          <div class="">
-
-            <h3 class="text-white text-center mt-2"><i class="fa-solid fa-circle-check"></i> TypeScript</h3>
+    <div class="skill-groups">
+      <article class="skill-group" *ngFor="let group of groups" appReveal>
+        <header>
+          <span class="group-icon"><i [class]="group.icon"></i></span>
+          <div>
+            <h3>{{ i18n.lang === 'es' ? group.titleEs : group.titleEn }}</h3>
+            <p>{{ i18n.lang === 'es' ? group.descriptionEs : group.descriptionEn }}</p>
           </div>
-
+        </header>
+        <div class="skill-list">
+          <div class="skill-chip" *ngFor="let skill of group.skills">
+            <i class="skill-icon" [ngClass]="skill.icon"></i>
+            <span>{{ skill.name }}</span>
+          </div>
         </div>
-      </div>
-      <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-5">
-        <div class="circulo mx-auto text-center">
-          <img
-            src="../../assets/circuloangular.png"
-            alt="Angular"
-            width="70"
-            height="70"
-            class="img mt-1"
-          />
-          <h3 class="text-white text-center mt-2"><i class="fa-solid fa-circle-check"></i> Angular</h3>
-
-
-        </div>
-      </div>
-      <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-5">
-        <div class="circulo mx-auto text-center">
-          <img
-            src="../../assets/circulosql.png"
-            alt="SQL"
-            width="70"
-            height="70"
-            class="img mt-1"
-          />
-          <h3 class="text-white text-center mt-2"><i class="fa-solid fa-circle-check"></i> SQL</h3>
-
-
-        </div>
-      </div>
-      <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-5">
-        <div class="circulo mx-auto text-center">
-          <img
-            src="../../assets/circlegit.png"
-            alt="Git"
-            width="70"
-            height="70"
-            class="img mt-1"
-          />
-          <h3 class="text-white text-center mt-2"><i class="fa-solid fa-circle-check"></i> Git</h3>
-
-
-        </div>
-      </div>
-      <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-5">
-        <div class="circulo mx-auto text-center">
-          <img
-            src="../../assets/dockercircle.png"
-            alt="Docker"
-            width="70"
-            height="70"
-            class="img mt-1"
-          />
-          <h3 class="text-white text-center mt-2"><i class="fa-solid fa-circle-check"></i> Docker</h3>
-
-
-        </div>
-      </div>
-      <div class="col-12 col-lg-5 mx-auto mt-5 mt-lg-5">
-        <div class="circulo mx-auto text-center">
-          <img
-            src="../../assets/circulokubernetes.png"
-            alt="Kubernetes"
-            width="70"
-            height="70"
-            class="img mt-1"
-          />
-          <h3 class="text-white text-center mt-2"><i class="fa-solid fa-circle-check"></i> Kubernetes</h3>
-
-        </div>
-      </div>
+      </article>
     </div>
   </div>
 </section>

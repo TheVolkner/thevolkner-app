@@ -1,52 +1,32 @@
-<nav class="navbar fixed-top navbar-expand-lg bg-warning">
-  <div class="container-fluid">
-    <a href="#main-aboutme"
-      ><button class="btn btn-outline-secondary border-0 text-dark fw-bold">
-        Home
-      </button></a
-    >
+<header class="site-header">
+  <div class="site-container nav-shell">
+    <a class="brand" href="#home" aria-label="TheVolkner — inicio" (click)="closeMenu()">
+      <span class="brand-copy">Omar Arvelo <strong>(TheVolkner)</strong><small>FULL-STACK DEVELOPER</small></span>
+    </a>
+
     <button
-      class="navbar-toggler"
+      class="menu-toggle"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+      [class.is-open]="menuOpen"
+      [attr.aria-expanded]="menuOpen"
+      aria-controls="site-navigation"
+      [attr.aria-label]="i18n.text('Abrir menú', 'Open menu')"
+      (click)="menuOpen = !menuOpen"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span></span><span></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a
-          href="#section-description"
-          class="text-decoration-none mx-auto text-center"
-          ><button class="btn btn-outline-secondary border-0 text-dark fw-bold">
-            About Me
-          </button></a
-        >
-        <a
-          href="#section-skills"
-          class="text-decoration-none mx-auto text-center"
-          ><button class="btn btn-outline-secondary border-0 text-dark fw-bold">
-            Skills
-          </button></a
-        >
-        <a
-          href="#section-portfolio"
-          class="text-decoration-none mx-auto text-center"
-          ><button class="btn btn-outline-secondary border-0 text-dark fw-bold">
-            Portfolio
-          </button></a
-        >
-        <a
-          href="#section-contact"
-          class="text-decoration-none mx-auto text-center"
-          ><button class="btn btn-outline-secondary border-0 text-dark fw-bold">
-            Contact Me
-          </button></a
-        >
-      </div>
+
+    <nav id="site-navigation" class="navigation" [class.is-open]="menuOpen">
+      <a href="#about" (click)="closeMenu()">{{ i18n.text('Sobre mí', 'About') }}</a>
+      <a href="#skills" (click)="closeMenu()">{{ i18n.text('Habilidades', 'Skills') }}</a>
+      <a href="#work" (click)="closeMenu()">{{ i18n.text('Proyectos', 'Work') }}</a>
+      <a href="#contact" (click)="closeMenu()">{{ i18n.text('Contacto', 'Contact') }}</a>
+    </nav>
+
+    <div class="language-switch" role="group" [attr.aria-label]="i18n.text('Seleccionar idioma', 'Select language')">
+      <button type="button" [class.active]="i18n.lang === 'es'" (click)="setLanguage('es')">ES</button>
+      <span></span>
+      <button type="button" [class.active]="i18n.lang === 'en'" (click)="setLanguage('en')">EN</button>
     </div>
   </div>
-</nav>
+</header>

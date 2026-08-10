@@ -1,17 +1,8 @@
-*{
-  margin:0;
-}
-
-.footer-webpage {
-  background-color: #F6C90E;
-    margin:0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .letra-footer{
-   font-family: 'Roboto';
-   font-weight:400;
- }
+.footer-webpage { padding: 28px 0; color: #080808; background: #f6c90e; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+.footer-brand { display: flex; align-items: center; color: #080808; font-family: "Space Grotesk", sans-serif; font-size: .85rem; font-weight: 800; letter-spacing: .01em; text-decoration: none; }
+.footer-inner p { margin: 0; font-size: .74rem; font-weight: 600; }
+.footer-links { display: flex; align-items: center; gap: 18px; }
+.footer-links a { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(8,8,8,.25); border-radius: 50%; color: #080808; font-size: 1rem; font-weight: 800; text-decoration: none; transition: color 180ms ease, background 180ms ease, transform 180ms ease; }
+.footer-links a:hover { color: #f6c90e; background: #080808; transform: translateY(-3px); }
+@media (max-width: 700px) { .footer-inner { flex-direction: column; text-align: center; } }
