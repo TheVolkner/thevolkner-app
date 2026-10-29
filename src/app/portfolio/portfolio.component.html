@@ -11,8 +11,20 @@
     <div class="project-grid">
       <article class="project-card" [class.featured]="project.featured" *ngFor="let project of projects; let i = index" appReveal>
         <div class="project-media" *ngIf="project.image || project.video; else abstractMedia">
-          <img *ngIf="project.image" [src]="project.image" [alt]="project.title" loading="lazy" />
-          <video *ngIf="project.video" controls preload="metadata"><source [src]="project.video" type="video/mp4" /></video>
+          <video
+            *ngIf="project.video; else projectImage"
+            controls
+            playsinline
+            preload="metadata"
+            [poster]="project.image || null"
+            [attr.aria-label]="i18n.text('Demo en video de ' + project.title, 'Video demo of ' + project.title)"
+          >
+            <source [src]="project.video" type="video/mp4" />
+            {{ i18n.text('Tu navegador no puede reproducir este video.', 'Your browser cannot play this video.') }}
+          </video>
+          <ng-template #projectImage>
+            <img *ngIf="project.image" [src]="project.image" [alt]="project.title" loading="lazy" />
+          </ng-template>
         </div>
         <ng-template #abstractMedia><div class="project-media abstract"><i class="fa-solid fa-terminal"></i><i class="fa-solid fa-code"></i></div></ng-template>
         <div class="project-content">
@@ -20,7 +32,7 @@
           <h3>{{ project.title }}</h3>
           <p>{{ i18n.lang === 'es' ? project.descriptionEs : project.descriptionEn }}</p>
           <div class="tags"><span *ngFor="let technology of project.technologies">{{ technology }}</span></div>
-          <div class="project-links">
+          <div class="project-links" *ngIf="project.links.length">
             <a *ngFor="let link of project.links" [href]="link.url" target="_blank" rel="noopener">
               {{ i18n.lang === 'es' ? link.labelEs : link.labelEn }} <i class="fa-solid" [ngClass]="link.icon"></i>
             </a>

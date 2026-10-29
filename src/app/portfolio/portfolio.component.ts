@@ -26,10 +26,12 @@ export class PortfolioComponent {
   projects: Project[] = [
     {
       title: 'DondeAyudoVenezuela', categoryEs: 'Plataforma cívica', categoryEn: 'Civic platform', featured: true,
-      descriptionEs: 'Aplicación web desarrollada con Spring Boot y Angular para centralizar información relevante sobre edificios afectados, sismos registrados por la USGS, centros de acopio y refugios tras el doblete sísmico del 24 de junio de 2026 en Venezuela.',
-      descriptionEn: 'A Spring Boot and Angular web app that centralizes relevant information about affected buildings, USGS-recorded earthquakes, collection centers and shelters following the June 24, 2026 double earthquake in Venezuela.',
-      technologies: ['Angular', 'Spring Boot', 'USGS API', 'Leaflet'], image: 'assets/donde-ayudo-venezuela.png',
-      links: [{ labelEs: 'Visitar proyecto', labelEn: 'Visit project', url: 'https://dondeayudovenezuela.vercel.app/', icon: 'fa-arrow-up-right-from-square' }]
+      descriptionEs: 'Aplicación web desarrollada con Spring Boot y Angular para centralizar información relevante sobre edificios afectados, sismos registrados por la USGS, centros de acopio y refugios. Sirvió como web interactiva para gestionar apoyo y recursos durante la urgencia nacional producto del doblete sísmico de junio de 2026 en Venezuela.',
+      descriptionEn: 'A Spring Boot and Angular web app that centralized relevant information about affected buildings, USGS-recorded earthquakes, collection centers and shelters. It served as an interactive platform for coordinating support and resources during the national emergency caused by the June 2026 double earthquake in Venezuela.',
+      technologies: ['Angular', 'Spring Boot', 'USGS API', 'Leaflet'],
+      image: 'assets/donde-ayudo-venezuela.png',
+      video: 'assets/donde-ayudo-venezuela-demo.mp4',
+      links: []
     },
     {
       title: 'Sistema de Exámenes', categoryEs: 'Full-Stack', categoryEn: 'Full-Stack',

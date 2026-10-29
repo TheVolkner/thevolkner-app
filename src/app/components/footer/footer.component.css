@@ -1,6 +1,9 @@
-.footer-webpage { padding: 28px 0; color: #080808; background: #f6c90e; }
+.footer-webpage { position: relative; padding: 28px 0; overflow: hidden; color: #080808; background: #f6c90e; }
+.footer-webpage::before { position: absolute; inset: 0; content: ""; opacity: .09; background: repeating-linear-gradient(-14deg, transparent 0 18px, #080808 19px 20px); pointer-events: none; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
-.footer-brand { display: flex; align-items: center; color: #080808; font-family: "Space Grotesk", sans-serif; font-size: .85rem; font-weight: 800; letter-spacing: .01em; text-decoration: none; }
+.footer-brand { position: relative; display: flex; align-items: center; gap: 11px; color: #080808; font-family: var(--font-display); font-size: .9rem; font-weight: 800; letter-spacing: .01em; text-decoration: none; text-transform: uppercase; }
+.footer-brand img { width: 44px; height: 44px; object-fit: cover; border: 2px solid #080808; border-radius: 50%; }
+.footer-brand strong { font-family: var(--font-graffiti); font-size: 1.15rem; font-weight: 400; text-transform: none; }
 .footer-inner p { margin: 0; font-size: .74rem; font-weight: 600; }
 .footer-links { display: flex; align-items: center; gap: 18px; }
 .footer-links a { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid rgba(8,8,8,.25); border-radius: 50%; color: #080808; font-size: 1rem; font-weight: 800; text-decoration: none; transition: color 180ms ease, background 180ms ease, transform 180ms ease; }

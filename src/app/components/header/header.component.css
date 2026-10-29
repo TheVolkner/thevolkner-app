@@ -5,18 +5,22 @@
   right: 0;
   left: 0;
   border-bottom: 1px solid rgba(255,255,255,.1);
-  background: rgba(8,8,8,.82);
+  background: rgba(8,8,8,.88);
+  box-shadow: 0 12px 34px rgba(0,0,0,.25);
   backdrop-filter: blur(18px);
 }
 
-.nav-shell { display: flex; align-items: center; min-height: 76px; gap: 28px; }
+.nav-shell { display: flex; align-items: center; min-height: 82px; gap: 28px; }
 .brand { display: inline-flex; align-items: center; gap: 11px; margin-right: auto; text-decoration: none; }
-.brand-copy { display: grid; grid-template-columns: auto auto; column-gap: 5px; color: #fff; font-family: "Space Grotesk", sans-serif; font-size: .92rem; font-weight: 700; letter-spacing: .01em; line-height: 1.1; }
-.brand-copy strong { color: #f6c90e; font-weight: 700; }
-.brand-copy small { margin-top: 4px; color: #8c8c87; font-family: "Inter", sans-serif; font-size: .54rem; letter-spacing: .12em; }
+.brand-mark { display: grid; width: 52px; height: 52px; place-items: center; overflow: hidden; border: 2px solid #f6c90e; border-radius: 50%; box-shadow: 0 0 0 4px rgba(246,201,14,.08), 0 0 24px rgba(246,201,14,.2); transition: transform .25s ease; }
+.brand-mark img { width: 100%; height: 100%; object-fit: cover; }
+.brand:hover .brand-mark { transform: rotate(-7deg) scale(1.04); }
+.brand-copy { display: grid; grid-template-columns: auto auto; column-gap: 5px; color: #fff; font-family: var(--font-display); font-size: 1rem; font-weight: 800; letter-spacing: .015em; line-height: 1.05; text-transform: uppercase; }
+.brand-copy strong { position: relative; top: 1px; color: #f6c90e; font-family: var(--font-graffiti); font-size: 1.18rem; font-weight: 400; letter-spacing: 0; text-transform: none; text-shadow: 0 0 16px rgba(246,201,14,.18); transform: rotate(-1deg); transform-origin: left center; }
+.brand-copy small { margin-top: 5px; color: #aaa9a2; font-family: "Inter", sans-serif; font-size: .52rem; letter-spacing: .18em; }
 .brand-copy small { grid-column: 1 / -1; }
 .navigation { display: flex; align-items: center; gap: 28px; }
-.navigation a { position: relative; color: #d3d2cc; font-size: .88rem; font-weight: 600; text-decoration: none; transition: color 180ms ease; }
+.navigation a { position: relative; color: #d3d2cc; font-family: var(--font-display); font-size: .92rem; font-weight: 700; letter-spacing: .04em; text-decoration: none; text-transform: uppercase; transition: color 180ms ease; }
 .navigation a::after { position: absolute; right: 0; bottom: -9px; left: 0; height: 2px; content: ""; background: #f6c90e; transform: scaleX(0); transform-origin: right; transition: transform 220ms ease; }
 .navigation a:hover { color: #fff; }
 .navigation a:hover::after { transform: scaleX(1); transform-origin: left; }
@@ -41,6 +45,7 @@
 }
 
 @media (max-width: 520px) {
+  .brand-mark { width: 44px; height: 44px; }
   .brand-copy { max-width: 145px; font-size: .76rem; }
   .brand-copy strong { display: none; }
 }

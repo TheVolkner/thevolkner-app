@@ -9,7 +9,9 @@
   --muted: #aaa9a2;
   --line: rgba(255, 255, 255, 0.12);
   --container: 1180px;
-  --radius: 24px;
+  --radius: 20px;
+  --font-display: "Roboto Condensed", "Inter", sans-serif;
+  --font-graffiti: "Sedgwick Ave Display", cursive;
 }
 
 * {
@@ -29,6 +31,16 @@ body {
   overflow-x: hidden;
 }
 
+body::before {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: .055;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+}
+
 body::selection {
   color: var(--ink);
   background: var(--yellow);
@@ -46,6 +58,24 @@ button, input, textarea { font: inherit; }
   position: relative;
   padding: 112px 0;
   overflow: hidden;
+  isolation: isolate;
+  border-top: 1px solid rgba(246, 201, 14, .08);
+}
+
+.section-shell::after {
+  position: absolute;
+  right: -22px;
+  bottom: 28px;
+  content: "THEVOLKNER";
+  color: currentColor;
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 13vw, 12rem);
+  font-weight: 900;
+  letter-spacing: -.07em;
+  line-height: .7;
+  opacity: .025;
+  pointer-events: none;
+  transform: rotate(-3deg);
 }
 
 .section-kicker {
@@ -54,7 +84,8 @@ button, input, textarea { font: inherit; }
   gap: 10px;
   margin: 0 0 16px;
   color: var(--yellow);
-  font-size: 0.76rem;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -70,11 +101,12 @@ button, input, textarea { font: inherit; }
 .section-title {
   max-width: 760px;
   margin: 0;
-  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2.25rem, 5vw, 4.6rem);
-  font-weight: 700;
-  letter-spacing: -0.055em;
-  line-height: 0.98;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+  text-transform: uppercase;
 }
 
 .section-intro {
@@ -87,6 +119,9 @@ button, input, textarea { font: inherit; }
 
 .button-primary,
 .button-secondary {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -94,25 +129,51 @@ button, input, textarea { font: inherit; }
   min-height: 52px;
   padding: 0 22px;
   border: 1px solid var(--yellow);
-  border-radius: 999px;
+  border-radius: 8px 18px 8px 18px;
+  font-family: var(--font-display);
   font-weight: 800;
+  letter-spacing: .04em;
   text-decoration: none;
+  text-transform: uppercase;
   transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease;
 }
 
+.button-primary::before,
+.button-secondary::before {
+  position: absolute;
+  z-index: -1;
+  top: -80%;
+  left: -35%;
+  width: 20%;
+  height: 260%;
+  content: "";
+  background: rgba(255,255,255,.6);
+  filter: blur(5px);
+  transform: rotate(18deg) translateX(-250%);
+  transition: transform .6s ease;
+}
+
+.button-primary:hover::before,
+.button-secondary:hover::before { transform: rotate(18deg) translateX(850%); }
+
 .button-primary { color: var(--ink); background: var(--yellow); }
 .button-secondary { color: var(--cream); background: transparent; border-color: var(--line); }
-.button-primary:hover, .button-secondary:hover { transform: translateY(-3px); }
+.button-primary:hover, .button-secondary:hover { transform: translateY(-3px) rotate(-1deg); box-shadow: 6px 6px 0 rgba(246,201,14,.18); }
 .button-primary:hover { background: var(--yellow-bright); }
 .button-secondary:hover { color: var(--yellow); border-color: var(--yellow); }
 
 [appReveal] {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 700ms cubic-bezier(.2,.75,.3,1), transform 700ms cubic-bezier(.2,.75,.3,1);
+  filter: blur(6px);
+  transform: translateY(36px) scale(.985);
+  transition: opacity 750ms cubic-bezier(.2,.75,.3,1), transform 750ms cubic-bezier(.2,.75,.3,1), filter 750ms ease;
 }
 
-[appReveal].is-visible { opacity: 1; transform: translateY(0); }
+[appReveal].is-visible { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+
+.project-grid > [appReveal]:nth-child(2n),
+.about-grid > [appReveal]:nth-child(2n),
+.skill-groups > [appReveal]:nth-child(2n) { transition-delay: 90ms; }
 
 @media (max-width: 767px) {
   .site-container { width: min(calc(100% - 28px), var(--container)); }
